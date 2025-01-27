@@ -88,14 +88,14 @@ while True:
             score+=1 #Tăng điểm lên 1
             winsound.PlaySound("sound/Magic Spell.wav",winsound.SND_ASYNC) #Them sound mỗi lần tăng điểm
     
-        distance = math.sqrt((ship_x -  meteoroid_x)**2 + (ship_y - meteoroid_y)**2)
+        distance = math.sqrt((ship_x -  meteoroid_x)**2 + (ship_y - meteoroid_y)**2) #Tính khoảng cách giữa 2 điểm trên tọa độ
         
-        if distance < 40:
+        if distance < 40: #Kiểm tra khoảng cách của 2 điểm nếu nhỏ hơn 40 thì kết thúc game
             winsound.PlaySound("sound/explosion.wav", winsound.SND_ASYNC)
             game_over = True
             
     else:
-        screen.fill((0,0,0))
+        screen.fill((0,0,0)) #Reset lại màn hình và hiển thị thông báo game over
         over_render = Over_text.render("Game Over. Press R to continue.",True,(255,0,0))
         screen.blit(over_render,(15,140))
         pygame.display.update()
