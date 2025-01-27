@@ -5,7 +5,7 @@ import winsound
 import math
 
 pygame.init() #Khởi tạo thư viện
-pygame.display.set_caption("Lái tàu vũ trụ")    #Cài titler
+pygame.display.set_caption("Lái tàu vũ trụ")    #Cài title
 screen = pygame.display.set_mode((480,360))     #Cài kích thước cửa sổ
 
 Ship_img= pygame.image.load("img/rocketship.png") #Tải hình ảnh 
